@@ -69,3 +69,10 @@ select name from sys.databases order by name
 --https://www.javatpoint.com/sql-server-drop-database
 
 --DROP DATABASE [IF EXIST] database_name  
+
+-- use databases in SQL Server
+
+--use database_name
+
+use demo
+
