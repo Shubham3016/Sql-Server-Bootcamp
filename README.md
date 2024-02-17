@@ -35,6 +35,8 @@ Centralized database management system is the system in which all the data is st
 
 It comforts the users to access the stored data from different locations through several applications
 
+![image](https://github.com/Shubham3016/Sql-Server-Bootcamp/assets/43364183/e16dc7b3-e0ce-4ee5-9199-6a97e739b3ed)
+
 
 ### 2) Distributed Database
 
@@ -93,8 +95,9 @@ It is called Relational Database Management System (RDBMS) because it is based o
 - Data is represented in terms of **tuples (rows)** in RDBMS.
 - A relational database is the most commonly used database. It contains several tables, and each table has its primary key.
 - Due to a collection of an organized set of tables, data can be accessed easily in RDBMS.
+- 
+![image](https://github.com/Shubham3016/Sql-Server-Bootcamp/assets/43364183/49f4b696-8f16-44b0-b271-2f714b53a460)
 
-![image](https://github.com/Shubham3016/Sql-Server-Bootcamp/assets/43364183/27e5f567-f1bb-46b4-af66-e0bfa4b6888a)
 
 ## Table/Relation
 
