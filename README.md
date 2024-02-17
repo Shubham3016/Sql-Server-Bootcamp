@@ -35,10 +35,12 @@ Centralized database management system is the system in which all the data is st
 
 It comforts the users to access the stored data from different locations through several applications
 
+
 ### 2) Distributed Database
 
 Unlike a centralized database system, in distributed systems, data is distributed among different database systems of an organization. These database systems are connected via communication links. Such links help the end-users to access the data easily. Examples of the Distributed database are Apache Cassandra, HBase, Ignite, etc.
 
+![image](https://github.com/Shubham3016/Sql-Server-Bootcamp/assets/43364183/4dd71e92-ef40-4d00-9dee-202fe8af3113)
 
 
 ### 3) Relational Database
@@ -66,7 +68,6 @@ Amazon Web Services(AWS)
 , ScienceSoft
 , Google Cloud SQL, etc.
 
-![App Screenshot]("")
 
 
 ## DBMS
@@ -93,9 +94,7 @@ It is called Relational Database Management System (RDBMS) because it is based o
 - A relational database is the most commonly used database. It contains several tables, and each table has its primary key.
 - Due to a collection of an organized set of tables, data can be accessed easily in RDBMS.
 
-
-
-![App Screenshot]()
+![image](https://github.com/Shubham3016/Sql-Server-Bootcamp/assets/43364183/27e5f567-f1bb-46b4-af66-e0bfa4b6888a)
 
 ## Table/Relation
 
@@ -103,11 +102,16 @@ Everything in a relational database is stored in the form of relations. The RDBM
 
 Each table represents some real-world objects such as person, place, or event about which information is collected. The organized collection of data into a relational table is known as the logical view of the database.
 
+![image](https://github.com/Shubham3016/Sql-Server-Bootcamp/assets/43364183/814fbce9-56c6-411f-ba62-cb31fd4e931d)
 
 ## Row
 
 A row of a table is also called a record or tuple. It contains the specific information of each entry in the table. It is a horizontal entity in the table. For example, The above table contains 5 records.
 
+![image](https://github.com/Shubham3016/Sql-Server-Bootcamp/assets/43364183/4899bb68-e392-4a2b-99d2-8728750abe63)
+
 ## Column/attribute
 
 A column is a vertical entity in the table which contains all information associated with a specific field in a table. For example, "name" is a column in the above table which contains all information about a student's name.
+
+![image](https://github.com/Shubham3016/Sql-Server-Bootcamp/assets/43364183/ec222f23-34c4-4527-856f-f0ad68069350)
