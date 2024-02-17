@@ -118,3 +118,12 @@ A row of a table is also called a record or tuple. It contains the specific info
 A column is a vertical entity in the table which contains all information associated with a specific field in a table. For example, "name" is a column in the above table which contains all information about a student's name.
 
 ![image](https://github.com/Shubham3016/Sql-Server-Bootcamp/assets/43364183/ec222f23-34c4-4527-856f-f0ad68069350)
+
+
+## Difference between DBMS and RDBMS
+
+Although DBMS and RDBMS both are used to store information in physical database but there are some remarkable differences between them.
+
+
+![image](https://github.com/Shubham3016/Sql-Server-Bootcamp/assets/43364183/bead8553-bab0-4317-b6cb-d214c64ccf58)
+
