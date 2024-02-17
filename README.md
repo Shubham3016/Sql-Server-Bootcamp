@@ -1,5 +1,11 @@
 # Sql-Server-Bootcamp
 
+## DATA
+------------
+Data can be anything and everything. Any information or facts can be considered as data like your name, age, Date of birth, Address, mobile no all this stuff can be considered as data.
+
+Data can be in any form like it can be in image format, it can be in video format or can be files and txt it can be anything and can be stored in database.
+  
 ## DATABASE
 ------------------
 
