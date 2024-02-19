@@ -127,3 +127,22 @@ DBMS and RDBMS both are used to store information in physical database but there
 
 ![image](https://github.com/Shubham3016/Sql-Server-Bootcamp/assets/43364183/bead8553-bab0-4317-b6cb-d214c64ccf58)
 
+
+
+### SQL
+
+SQL is a short-form of the Structured Query Language, and it is pronounced as S-Q-L or sometimes as See-Quell.
+
+SQL is a programming language which is used to interact with relational database or RDBMS
+
+It is an database language  that is mainly designed for maintaining the data in relational database management systems (RDBMS). It is a special tool used by data professionals for handling structured data
+
+Using SQL commands, you can read data from a relational database or write data into a relational database. You can also create, modify and delete database. SQL can also be used to analyze and protect data.
+
+Almost all of the RDBMS available today such as Oracle, MySQL, Microsoft SQL Server, PostgreSQL, IBM DB2, SQLite, MariaDB, Teradata, Hive etc uses SQL to manage data.
+
+## SQL Commands
+
+![image](https://github.com/Shubham3016/Sql-Server-Bootcamp/assets/43364183/46685170-5702-4bff-b815-297c15c834d3)
+
+
