@@ -193,14 +193,12 @@ create command is used to Create a new database object such a tables, views or f
 
 #### SYNTAX
 
-## Running Tests
-
 To run tests, run the following command
 
 ```bash
  Create database database_name;
 ```
-In the above syntax, the database_name indicates the name of a new database.
+In the above syntax, the database_name indicates the name of a new database. which is **user created database**
 
 ### Example
 Let us understand how to create a database in SQL through an example. To do this, first, open the RDBMS Here we had taken RDBMS sql server after that connect with the database engine by giving the server address and the authentication details. Then, click a new query from the standard bar.
