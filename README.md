@@ -128,10 +128,9 @@ DBMS and RDBMS both are used to store information in physical database but there
 ![image](https://github.com/Shubham3016/Sql-Server-Bootcamp/assets/43364183/bead8553-bab0-4317-b6cb-d214c64ccf58)
 
 
-
 ### SQL
 
-SQL is a short-form of the Structured Query Language, and it is pronounced as S-Q-L or sometimes as See-Quell.
+SQL is a short-form of the **Structured Query Language,** and it is pronounced as S-Q-L or sometimes as See-Quell.
 
 SQL is a programming language which is used to interact with relational database or RDBMS
 
@@ -141,8 +140,36 @@ Using SQL commands, you can read data from a relational database or write data i
 
 Almost all of the RDBMS available today such as Oracle, MySQL, Microsoft SQL Server, PostgreSQL, IBM DB2, SQLite, MariaDB, Teradata, Hive etc uses SQL to manage data.
 
+https://techtfq.com/blog/sql-basics-tutorial-for-beginners
+
+
 ## SQL Commands
 
-![image](https://github.com/Shubham3016/Sql-Server-Bootcamp/assets/43364183/46685170-5702-4bff-b815-297c15c834d3)
+SQL commands are instructions. It is used to communicate with the database. It is also used to perform specific tasks, functions, and queries of data.
 
+SQL can perform various tasks like create a table, add data to tables, drop the table, modify the table, set permission for users.
 
+## Types of SQL Commands
+
+There are five types of SQL commands: **DDL, DML, DCL, TCL, and DQL**.
+
+![Uploading image.png…]()
+
+### Data Definition Language (DDL)
+
+DDL changes the structure of the table like creating a table, deleting a table, altering a table, etc.
+
+Used to define the structure of database objects such as tables, views, functions etc. Using DDL commands, we can create, modify and drop any database objects. The commands include:
+
+All the command of DDL are auto-committed that means it permanently save all the changes in the database.
+
+Here are some commands that come under **DDL**:
+
+- CREATE
+- ALTER
+- DROP
+- TRUNCATE
+
+### CREATE 
+
+It is used to create a new table in the database.
