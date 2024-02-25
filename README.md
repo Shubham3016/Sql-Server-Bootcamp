@@ -140,14 +140,31 @@ Using SQL commands, you can read data from a relational database or write data i
 
 Almost all of the RDBMS available today such as Oracle, MySQL, Microsoft SQL Server, PostgreSQL, IBM DB2, SQLite, MariaDB, Teradata, Hive etc uses SQL to manage data.
 
-https://techtfq.com/blog/sql-basics-tutorial-for-beginners
+SQL Server provides two types of database:
 
+- **System databases**
+- **User Databases**
+
+#### System Databases: 
+
+The system databases are created automatically while installing the ANY RDBMS like my sql, sql server on our system. It plays an essential role in the server such database run perfectly. 
+
+The following are the list of system databases in SQL Server:
+
+- Master
+- Model
+- MSDB
+- Tempdb
+
+#### User Databases: 
+
+The user databases are created by database users like DBAs and testers who can access a database also.
 
 ## SQL Commands
 
 SQL commands are instructions. It is used to communicate with the database. It is also used to perform specific tasks, functions, and queries of data.
-
 SQL can perform various tasks like create a table, add data to tables, drop the table, modify the table, set permission for users.
+SQL Server provides two types of database:
 
 ## Types of SQL Commands
 
@@ -172,4 +189,39 @@ Here are some commands that come under **DDL**:
 
 ### CREATE 
 
-It is used to create a new table in the database.
+create command is used to Create a new database object such a tables, views or functions etc.
+
+#### SYNTAX
+
+## Running Tests
+
+To run tests, run the following command
+
+```bash
+ Create database database_name;
+```
+In the above syntax, the database_name indicates the name of a new database.
+
+### Example
+Let us understand how to create a database in SQL through an example. To do this, first, open the RDBMS Here we had taken RDBMS sql server after that connect with the database engine by giving the server address and the authentication details. Then, click a new query from the standard bar.
+
+Once the connection becomes successful, execute the below statement to create a new database named Practice:
+
+```bash
+ Create database Practice;
+```
+Whether, you create a database graphically using the designer or, using a query, the following 2 files gets generated.
+
+**.MDF file (Master data File)-**
+
+Data File (Contains actual data)
+
+**.LDF file (Log Data File)**
+
+Transaction Log file (Used to recover the database)
+
+
+
+
+
+
