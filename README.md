@@ -153,7 +153,7 @@ SQL can perform various tasks like create a table, add data to tables, drop the 
 
 There are five types of SQL commands: **DDL, DML, DCL, TCL, and DQL**.
 
-![Uploading image.png…]()
+![image](https://github.com/Shubham3016/Sql-Server-Bootcamp/assets/43364183/d652bf27-5d0c-4df4-bbed-849b2cb5ae74)
 
 ### Data Definition Language (DDL)
 
