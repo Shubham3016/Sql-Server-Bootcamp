@@ -293,6 +293,96 @@ SQL Server supports the following data type’s categories:
 ![image](https://github.com/Shubham3016/Sql-Server-Bootcamp/assets/43364183/4d5e8eab-bcef-4ea7-a46a-98e36deda9a6)
 
 
+```bash
+declare @bit bit
+set @bit=88
+select @bit
+
+-- It can store upto 255 digits only
+
+declare @tinyint tinyint
+set @tinyint=255
+select @tinyint
+
+-- It can store upto 32767 digits only
+
+declare @smallint smallint
+set @smallint=32767
+select @smallint
+
+-- you can store upto 10 digits of limit only
+
+declare @int int
+set @Int=2147483647
+select @int
+
+
+
+-- you can store upto 19 digits
+
+declare @bigint bigint
+set @bigint=2147483647098234567
+select @bigint
+
+
+-- It will print  on values before 
+
+declare @numeric numeric
+set @numeric=3.3232
+select @numeric
+
+
+declare @decimal decimal(8,2)
+set @decimal=212121.222222
+select @decimal
+
+-- here it will throw error because there should be total 7 values including decimal(7,2) it will give 8 values because values after point 
+--values is 2 so it will give error if we use (7,1) then we will get output
+
+declare @decimal1 decimal(7,2)
+set @decimal1=212121.222222
+select @decimal1
+
+
+declare @decimal2 decimal(6,1)
+set @decimal2=21121.222222
+select @decimal2
+
+
+--It allows storing monetary or currency values.
+
+declare @smallmoney smallmoney
+set @smallmoney=212323
+select @smallmoney
+
+
+declare @money money
+set @money=212323
+select @money
+
+--Approximate numeric: Read and float
+
+declare @float float
+set @float=1333232.213234332
+select @float
+
+
+declare @real real
+set @real=332.213234332
+select @real
+
+
+--Date and time: date, DateTime, datetime2, datetimeoffset, smalldatetime, time
+
+declare @date date
+set @date=cast(getdate()as date)
+select @date as DATE
+
+declare @datetime datetime
+set @datetime=getdate()
+select @datetime as datetime
+
+```
 ## ALTER 
 
 - Alter is used to modify the structure of an existing table. 
@@ -324,6 +414,18 @@ When we remove the database, it will also **Permanently delete all the tables, i
 
 User have to be very careful while dropping the database because it will lose all the data available in the database.
 
+
+
 ```bash
 DROP database Practice 
+```
+Dropping a database, deletes the LDF and MDF files.
+
+## TRUNCATE 
+
+TRUNCATE command is used to removes all rows from the table or specified partition without removing the table structure.
+
+
+```bash
+TRUNCATE TABLE TABLE_NAME 
 ```
