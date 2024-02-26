@@ -1,4 +1,3 @@
-![image](https://github.com/Shubham3016/Sql-Server-Bootcamp/assets/43364183/b28a6c8d-6355-4d68-ac08-4e797ccc254b)
 # SQL Server Bootcamp
 
 ## DATA
