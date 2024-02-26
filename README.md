@@ -187,7 +187,7 @@ Here are some commands that come under **DDL**:
 - DROP
 - TRUNCATE
 
-### CREATE 
+## CREATE 
 
 create command is used to Create a new database object such a tables, views or functions etc.
 
@@ -198,7 +198,7 @@ To run tests, run the following command
 ```bash
  Create database database_name;
 ```
-In the above syntax, the database_name indicates the name of a new database. which is **user created database**
+In the above syntax, the database_name indicates the name of a new database.
 
 ### Example
 Let us understand how to create a database in SQL through an example. To do this, first, open the RDBMS Here we had taken RDBMS sql server after that connect with the database engine by giving the server address and the authentication details. Then, click a new query from the standard bar.
@@ -218,8 +218,38 @@ Data File (Contains actual data)
 
 Transaction Log file (Used to recover the database)
 
+## ALTER 
+
+- Alter is used to modify the structure of an existing table. 
+- Alter can be used to rename a table or rename a column. 
+- Alter can also be used to add new column or change the data type of an existing column. 
+- Using Alter we can also add new constraints or remove a constraint from a table.
+
+#### SYNTAX
+
+```bash
+Alter database DatabaseName Modify Name = NewDatabaseName
+```
+To run tests, run the following command
+
+```bash
+Alter database Practice Modify Name = Demo
+```
+
+**Alternatively, you can also use system stored procedure**
+
+```bash
+Execute sp_renameDB 'Practice','Demo'
+```
+
+## DROP 
+Drop command is use to Delete or Drop a database.
+
+When we remove the database, it will also **Permanently delete all the tables, indexes, and constraints.**
+
+User have to be very careful while dropping the database because it will lose all the data available in the database.
 
 
-
-
-
+```bash
+DROP database Practice 
+```
