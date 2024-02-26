@@ -1,4 +1,4 @@
-
+![image](https://github.com/Shubham3016/Sql-Server-Bootcamp/assets/43364183/b28a6c8d-6355-4d68-ac08-4e797ccc254b)
 # SQL Server Bootcamp
 
 ## DATA
@@ -218,6 +218,82 @@ Data File (Contains actual data)
 
 Transaction Log file (Used to recover the database)
 
+
+![image](https://github.com/Shubham3016/Sql-Server-Bootcamp/assets/43364183/4d5e8eab-bcef-4ea7-a46a-98e36deda9a6)
+
+Here are some commands that come under **DDL**:
+
+- CREATE
+- ALTER
+- DROP
+- TRUNCATE
+
+## CREATE 
+
+create command is used to Create a new database object such a tables, views or functions etc.
+
+#### SYNTAX
+
+To run tests, run the following command
+
+```bash
+ Create database database_name;
+```
+In the above syntax, the database_name indicates the name of a new database.
+
+### Example
+Let us understand how to create a database in SQL through an example. To do this, first, open the RDBMS Here we had taken RDBMS sql server after that connect with the database engine by giving the server address and the authentication details. Then, click a new query from the standard bar.
+
+Once the connection becomes successful, execute the below statement to create a new database named Practice:
+
+```bash
+ Create database Practice;
+```
+Whether, you create a database graphically using the designer or, using a query, the following 2 files gets generated.
+
+**.MDF file (Master data File)-**
+
+Data File (Contains actual data)
+
+**.LDF file (Log Data File)**
+
+Transaction Log file (Used to recover the database)
+
+### CREATE TABLE
+
+A table enables the user to store data and display information in the database. It arranges the data in rows and columns. 
+
+It can have several rows and columns, and each column has a data type associated with it that specifies the type of data it can store, such as numbers, strings, or temporal data. 
+
+```bash
+CREATE TABLE Student(    
+    Id INT IDENTITY PRIMARY KEY,    
+    Name VARCHAR(65) NOT NULL,    
+    Gender VARCHAR(20),    
+    Age INT,    
+    Marks INT   
+ )  
+```
+
+In the above statement, we have created a 'Student' table.
+
+This table contains five columns Id, Name, Gender, Age, and Marks. 
+
+Here, we have defined the id column as a primary key. The IDENTITY data type generates integer numbers that automatically begin with one and increase by one for each new row.
+
+While creating tables there are 2 major components that plays the main role that is **DATA TYPES** and **constraints**
+
+Lets start with DATA TYPES
+SQL Server supports the following data type’s categories:
+
+- **Exact numeric:** bit, tinyint, smallint, int, bigint, decimal, numeric, money and smallmoney
+- **Approximate numeric:** Read and float
+- **Date and time:** date, DateTime, datetime2, datetimeoffset, smalldatetime, time
+- **Character strings:** char, varchar, text
+- **Unicode character strings:** Nchar, Nvarchar, Ntext
+- **Binary strings:** Binary, image and varbinary
+- **Other data types:** Cursor, hierarchyid, sql_variant, table, rowversion, uniqueidentifier, XML, Spatial and geography
+
 ## ALTER 
 
 - Alter is used to modify the structure of an existing table. 
@@ -248,7 +324,6 @@ Drop command is use to Delete or Drop a database.
 When we remove the database, it will also **Permanently delete all the tables, indexes, and constraints.**
 
 User have to be very careful while dropping the database because it will lose all the data available in the database.
-
 
 ```bash
 DROP database Practice 
