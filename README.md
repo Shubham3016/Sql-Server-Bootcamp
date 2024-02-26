@@ -218,9 +218,6 @@ Data File (Contains actual data)
 
 Transaction Log file (Used to recover the database)
 
-
-![image](https://github.com/Shubham3016/Sql-Server-Bootcamp/assets/43364183/4d5e8eab-bcef-4ea7-a46a-98e36deda9a6)
-
 Here are some commands that come under **DDL**:
 
 - CREATE
@@ -293,6 +290,9 @@ SQL Server supports the following data type’s categories:
 - **Unicode character strings:** Nchar, Nvarchar, Ntext
 - **Binary strings:** Binary, image and varbinary
 - **Other data types:** Cursor, hierarchyid, sql_variant, table, rowversion, uniqueidentifier, XML, Spatial and geography
+
+![image](https://github.com/Shubham3016/Sql-Server-Bootcamp/assets/43364183/4d5e8eab-bcef-4ea7-a46a-98e36deda9a6)
+
 
 ## ALTER 
 
