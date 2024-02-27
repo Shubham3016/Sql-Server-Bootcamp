@@ -217,43 +217,7 @@ Data File (Contains actual data)
 
 Transaction Log file (Used to recover the database)
 
-Here are some commands that come under **DDL**:
-
-- CREATE
-- ALTER
-- DROP
-- TRUNCATE
-
-## CREATE 
-
-create command is used to Create a new database object such a tables, views or functions etc.
-
-#### SYNTAX
-
-To run tests, run the following command
-
-```bash
- Create database database_name;
-```
-In the above syntax, the database_name indicates the name of a new database.
-
-### Example
-Let us understand how to create a database in SQL through an example. To do this, first, open the RDBMS Here we had taken RDBMS sql server after that connect with the database engine by giving the server address and the authentication details. Then, click a new query from the standard bar.
-
-Once the connection becomes successful, execute the below statement to create a new database named Practice:
-
-```bash
- Create database Practice;
-```
-Whether, you create a database graphically using the designer or, using a query, the following 2 files gets generated.
-
-**.MDF file (Master data File)-**
-
-Data File (Contains actual data)
-
-**.LDF file (Log Data File)**
-
-Transaction Log file (Used to recover the database)
+https://github.com/Shubham3016/Sql-Server-Bootcamp/blob/main/1.%20Databases%20in%20Sql%20server.sql
 
 ### CREATE TABLE
 
