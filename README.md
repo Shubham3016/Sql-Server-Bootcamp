@@ -346,6 +346,63 @@ declare @datetime datetime
 set @datetime=getdate()
 select @datetime as datetime
 
+
+
+
+	--char is used to store fixed-length non-Unicode character data.
+
+declare @char char(10)
+set @char='ABCD' 
+
+select @char as [CHAR]
+select DATALENGTH(@char) as [DATALENGTH]
+
+
+-- Varchar is used to store variable-length non-Unicode character data.
+
+declare @varchar varchar(10)
+set @varchar='ABCD' 
+
+select @varchar as [varCHAR]
+select DATALENGTH(@varchar) as [DATALENGTH]
+
+
+-- varchar(max) It is a data type that stores variable-length data. It is recommended to avoid this data type unless required because of its huge memory storage.
+
+declare @varchar1 varchar(max)
+set @varchar1 ='SDDSD'
+select @varchar1 as [varchar]
+
+select DATALENGTH(@varchar1) as [DATALENGTH]
+
+
+
+--nchar It is used to store fixed-length Unicode character data.
+
+declare @nchar nchar(5)
+set @nchar='ABCD' 
+
+select @nchar as [varCHAR]
+select DATALENGTH(@nchar) as [DATALENGTH]
+
+
+
+-- It is used to store variable-length Unicode character data.
+declare @nvarchar nvarchar(5)
+set @nvarchar='ABCD' 
+
+select @nvarchar as [nvarCHAR]
+select DATALENGTH(@nvarchar) as [DATALENGTH]
+
+
+DECLARE @BinaryVariable2 BINARY(2);
+  
+SET @BinaryVariable2 = 123456;
+SET @BinaryVariable2 = @BinaryVariable2 + 1;
+select @BinaryVariable2
+  
+SELECT CAST( @BinaryVariable2 AS INT);
+GO
 ```
 ## ALTER 
 
