@@ -450,3 +450,99 @@ TRUNCATE command is used to removes all rows from the table or specified partiti
 ```bash
 TRUNCATE TABLE TABLE_NAME 
 ```
+
+
+## CONSTRAINTS
+
+Constraints refers to limitation or restriction applied to a column in a table. Constraints are very important to maintain data integrity among tables. 
+
+If you want to make sure that wrong data is not inserted into your table then these kind of sanity checks can be applied by using CONSTRAINTS. 
+
+Constraints can be column level or table level. Column level constraints apply to a column, and table level constraints apply to the whole table.
+
+The following constraints are commonly used in SQL:
+
+- **NOT NULL** - Ensures that a column cannot have a NULL value
+
+- **UNIQUE** - Ensures that all values in a column are different
+
+- **PRIMARY KEY** - A combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table
+
+- **FOREIGN KEY** - Prevents actions that would destroy links between tables
+
+- **CHECK** - Ensures that the values in a column satisfies a specific condition
+
+- **DEFAULT** - Sets a default value for a column if no value is specified
+
+- **CREATE INDEX** - Used to create and retrieve data from the database very quickly
+
+Let’s look some of the most widely used constraints in RDBMS:
+
+### NOT NULL CONSTRAINT
+
+By applying NOT NULL constraint on a column, you make sure that this column will never have NULL or empty values.
+
+The NOT NULL constraint enforces a column to NOT accept NULL values.
+
+This enforces a field to always contain a value, which means that you cannot insert a new record, or update a record without adding a value to this field.
+
+SQL NOT NULL on CREATE TABLE
+
+```
+CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255) NOT NULL,
+    Age int
+);
+```
+
+To add Age column using alter and add NOT NULL CONSTRAINTS
+
+```
+ALTER TABLE Persons
+ALTER COLUMN Age int NOT NULL;
+```
+
+### UNIQUE Constraint
+
+The UNIQUE constraint ensures that all values in a column are different.
+
+Both the UNIQUE and PRIMARY KEY constraints provide a guarantee for uniqueness for a column or set of columns.
+A PRIMARY KEY constraint automatically has a UNIQUE constraint.
+
+However, you can have many UNIQUE constraints per table, but only one PRIMARY KEY constraint per table.
+
+
+
+Unique constraints are used to make sure that values inserted into a column across all the rows have unique or distinct values. It can help you to eliminate any duplicate data in a column. 
+
+
+**NULL** values are allowed in a UNIQUE constraint column. And two NULL values are not same hence multiple rows with NULL values are allowed.
+
+```
+CREATE TABLE Persons (
+    ID int NOT NULL UNIQUE,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int
+);
+```
+
+
+**SQL UNIQUE Constraint on ALTER TABLE**
+
+```
+ALTER TABLE Persons
+ADD UNIQUE (ID);
+```
+```
+ALTER TABLE Persons
+ADD CONSTRAINT UC_Person UNIQUE (ID,LastName);
+```
+
+**DROP a UNIQUE Constraint**
+```
+ALTER TABLE Persons
+DROP CONSTRAINT UC_Person;
+```
