@@ -303,7 +303,7 @@ select @decimal
 -- here it will throw error because there should be total 7 values including decimal(7,2) it will give 8 values because values after point 
 --values is 2 so it will give error if we use (7,1) then we will get output
 
-declare @decimal1 decimal(7,2)
+declare @decimal1 decimal(7,1)
 set @decimal1=212121.222222
 select @decimal1
 
