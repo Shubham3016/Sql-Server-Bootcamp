@@ -1,4 +1,203 @@
+CREATE TABLE DEPT
+   (DEPTNO INT PRIMARY KEY, 
+	DNAME VARCHAR(14), 
+	LOC VARCHAR(13)
+   ) ;
+   
 
+Insert into DEPT (DEPTNO,DNAME,LOC) values (10,'ACCOUNTING','NEW YORK');
+Insert into DEPT (DEPTNO,DNAME,LOC) values (20,'RESEARCH','DALLAS');
+Insert into DEPT (DEPTNO,DNAME,LOC) values (30,'SALES','CHICAGO');
+Insert into DEPT (DEPTNO,DNAME,LOC) values (40,'OPERATIONS','BOSTON');
+Insert into DEPT (DEPTNO,DNAME,LOC) values (50,'IT','HYDERABAD');
+
+ CREATE TABLE EMP
+   (
+    EMPNO INT PRIMARY KEY, 
+	ENAME VARCHAR(10), 
+	JOB VARCHAR(10), 
+	MGR int, 
+	HIREDATE DATE, 
+	SAL int, 
+	DEPTNO int REFERENCES DEPT(DEPTNO)
+   ) ;
+   
+   
+Insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,DEPTNO) values (7839,'KING','PRESIDENT',null,'2023-01-01',5000,10);
+Insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,DEPTNO) values (7698,'BLAKE','MANAGER',7839,('2022-02-01'),2850,30);
+Insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,DEPTNO) values (7782,'CLARK','MANAGER',7839,('2021-02-01'),2450,10);
+Insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,DEPTNO) values (7566,'JONES','MANAGER',7839,('2024-01-01'),2975,20);
+Insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,DEPTNO) values (7788,'SCOTT','ANALYST',7566,('2020-03-04'),3000,20);
+Insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,DEPTNO) values (7902,'FORD','ANALYST',7566,('2020-12-81'),3000,20);
+Insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,DEPTNO) values (7369,'SMITH','CLERK',7902,('2017-12-08'),50,20);
+Insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,DEPTNO) values (8008,'BIPLAB  ','CLERK',7788,('2021-07-09'),8999,20);
+Insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,DEPTNO) values (8009,'BIPLAB','SALESMAN',7698,('2023-03-02'),9000,30);
+Insert into EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,DEPTNO) values (8010,'Jason','SALESMAN',7698,('2022-03-22'),9000,30);
+
+
+select * from EMP;
+SELECT * FROM DEPT;
+
+
+
+-- SUBQUERY
+
+--Employee belomings to sales dept
+Select DEPTNO from dept 
+WHERE DNAME='SALES'
+
+-- single row subquery
+select * from EMP where deptno =(Select DEPTNO from dept 
+WHERE DNAME='SALES');
+
+select * from EMP where deptno =30
+
+-- 30 is hard coded if there is chane in dept no then query will not statidy results
+-- 30 is sales dept
+
+
+-- INNER query will run first
+-- mULTIPLE ROW SUBQUERY
+
+
+select * from EMP where deptno in(Select DEPTNO from dept 
+WHERE DNAME='SALES' or DNAME='ACCOUNTING');
+
+
+-- inner  uqery returting the miultiple rows
+
+--we cannot use order by inside subquery
+
+select * from EMP where deptno in(Select DEPTNO from dept 
+WHERE DNAME='SALES' or DNAME='ACCOUNTING' ORDER BY DNAME DESC);
+
+-- final
+select * from EMP where deptno in(Select DEPTNO from dept 
+WHERE DNAME='SALES' or DNAME='ACCOUNTING')ORDER BY DEPTNO DESC;
+
+
+-- employee earning greater than manager
+
+-- Corelation SUBQUERY
+
+SELECT Ename,SAL 
+from emp e
+where sal>(SELECT sal from emp M where e.MGR=m.EMPNO)
+
+-- SECOND highest salary
+
+SELECT * FROM EMP order by sal desc
+
+SELECT * FROM EMP 
+where SAL<9000
+order by sal desc
+
+
+
+SELECT sal FROM EMP 
+where SAL<(select max(sal) from EMP)
+order by 1 desc
+
+select * from emp
+
+
+
+
+SELECT  max(sal)as sal FROM EMP 
+where SAL<(select max(sal) from EMP)
+order by 1 desc
+
+select * from EMP where deptno =30
+
+
+Create Table tblProducts
+(
+ [Id] int identity primary key,
+ [Name] nvarchar(50),
+ [Description] nvarchar(250)
+)
+
+Create Table tblProductSales
+(
+ Id int primary key identity,
+ ProductId int foreign key references tblProducts(Id),
+ UnitPrice int,
+ QuantitySold int
+)
+
+Insert into tblProducts values ('TV', '52 inch black color LCD TV')
+Insert into tblProducts values ('Laptop', 'Very thin black color acer laptop')
+Insert into tblProducts values ('Desktop', 'HP high performance desktop')
+
+Insert into tblProductSales values(3, 450, 5)
+Insert into tblProductSales values(2, 250, 7)
+Insert into tblProductSales values(3, 450, 4)
+Insert into tblProductSales values(3, 450, 9)
+
+SELECT * FROM tblProducts
+
+SELECT * FROM tblProductsales
+
+
+SELECT * FROM tblProducts
+where ID not in(SELECT DISTINCT ProductId FROM tblProductSales)
+
+
+
+
+SELECT * from tblProducts a
+Left join tblProductsales b
+on a.Id=b.ProductId
+where b.ProductId is null
+
+
+
+---Retrive name of product and qty sold records
+
+Select name,
+(SELECT SUM(QuantitySold)from tblProductSales a
+where ProductId=b.id)
+from tblProducts b
+order by name
+
+
+
+SELECT Name,sum(QuantitySold)as total 
+from tblProducts a
+ left join tblProductSales b
+ on a.Id=b.ProductId
+ group by Name
+
+--From these examples, it should be very clear that, a subquery is simply a select statement, that returns a single value and can be nested inside a SELECT, UPDATE, INSERT, or DELETE statement. 
+
+--It is also possible to nest a subquery inside another subquery.
+
+--According to MSDN, subqueries can be nested upto 32 levels.
+
+--Subqueries are always encolsed in paranthesis and are also called as inner queries, and the query containing the subquery is called as outer query.
+
+--The columns from a table that is present only inside a subquery, cannot be used in the SELECT list of the outer query.
+
+
+
+--If the subquery depends on the outer query for its values, then that sub query is called as a correlated subquery. In the where clause of the subquery below, "ProductId" column get it's value from tblProducts table that is present in the outer query. So, here the subquery is dependent on the outer query for it's value, hence this subquery is a correlated subquery. Correlated subqueries get executed, once for every row that is selected by the outer query. corelated subquery, cannot be executed independently of the outer query.
+
+Select [Name],
+(Select SUM(QuantitySold) from tblProductSales where ProductId = tblProducts.Id) as TotalQuantity
+from tblProducts
+
+
+
+SELECT *  FROM tblProducts
+where ID not in(SELECT distinct ProductId from tblProductSales)
+
+
+SELECT NAME,
+(SELECT SUM(QuantitySold) from tblProductSales  a
+where ProductId=b.id)as qtsold
+from tblProducts b
+
+--In the example below, sub query is executed first and only once. The sub query resutls are then used by the outer query. In a non
 create table department
 (
 	dept_id		int ,
@@ -470,3 +669,7 @@ delete from department d1
 where dept_name in (select dept_name from department d2
 				    where not exists (select 1 from employee e
 									  where e.dept_name = d2.dept_name));
+
+
+
+
