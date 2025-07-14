@@ -69,7 +69,39 @@ Amazon Web Services(AWS)
 , ScienceSoft
 , Google Cloud SQL, etc.
 
+## 📦 SCHEMAS IN SQL 
 
+A schema in SQL is like a folder inside a database that helps organize your data.
+It holds related things like tables, views, and other objects — kind of like how a folder holds files on your computer.
+
+Schema = A named container inside a database that organizes related tables and other objects.
+
+#### Imagine this:
+
+You have a big **toy box**. Inside the toy box, you keep different kinds of toys — 🚗 cars, 🧸 dolls, 🧱 blocks, 🐶 animals.
+
+Now, you want to organize them so it’s easy to find your favorite toy.
+
+So you say:
+
+- Cars go in **Box 1**
+- Dolls go in **Box 2**
+- Blocks go in **Box 3**
+
+Each box has a name and holds one kind of toy.
+
+
+---
+
+### 💡 In SQL terms:
+
+- The **big toy box** = **Database**
+- Each **box inside** = **Schema**
+- Inside each **schema**, we have **Tables** (the toys), which contain **Rows** (the actual toy data)
+
+So it's like:
+
+Database ➡️ Schema ➡️ Table ➡️ Rows
 
 ## DBMS
 DBMS is pronounced as **Database Management System**
