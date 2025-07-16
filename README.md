@@ -278,6 +278,20 @@ While creating tables there are 2 major components that plays the main role that
 Lets start with DATA TYPES
 SQL Server supports the following data type’s categories:
 
+## Data Types Comparison Across RDBMS
+
+| Data Type Category  | MySQL                          | PostgreSQL                    | Oracle                        | MSSQL                        | SQLite                          |
+|---------------------|--------------------------------|-------------------------------|-------------------------------|------------------------------|--------------------------------|
+| **Integer**         | TINYINT, SMALLINT, MEDIUMINT, INT, BIGINT | SMALLINT, INTEGER, BIGINT       | NUMBER(precision), INTEGER    | TINYINT, SMALLINT, INT, BIGINT | INTEGER                        |
+| **Decimal/Floating** | DECIMAL, NUMERIC, FLOAT, DOUBLE| NUMERIC, DECIMAL, REAL, DOUBLE PRECISION | NUMBER(p,s), FLOAT, BINARY_FLOAT, BINARY_DOUBLE | DECIMAL, NUMERIC, FLOAT, REAL | REAL, NUMERIC                  |
+| **Character**       | CHAR, VARCHAR, TEXT             | CHAR, VARCHAR, TEXT             | CHAR, VARCHAR2, CLOB            | CHAR, VARCHAR, TEXT           | TEXT                           |
+| **Date/Time**       | DATE, DATETIME, TIMESTAMP, TIME| DATE, TIME, TIMESTAMP, INTERVAL| DATE, TIMESTAMP, TIMESTAMP WITH TIME ZONE | DATE, DATETIME, DATETIME2, SMALLDATETIME | DATE, DATETIME, TIMESTAMP (stored as TEXT) |
+| **Boolean**         | BOOL, BOOLEAN (alias for TINYINT)| BOOLEAN                      | NUMBER(1) or use custom types  | BIT                          | No native BOOLEAN, uses INTEGER 0/1 |
+| **Binary**          | BINARY, VARBINARY, BLOB        | BYTEA                          | BLOB, RAW                     | BINARY, VARBINARY, IMAGE     | BLOB                           |
+| **UUID/GUID**       | CHAR(36), BINARY(16) (manual) | UUID                          | RAW(16)                      | UNIQUEIDENTIFIER             | No native support (stored as TEXT) |
+| **JSON**            | JSON, JSONB (MySQL 5.7+)       | JSON, JSONB                   | CLOB with JSON validation      | NVARCHAR(MAX) with JSON support | TEXT (no native JSON)          |
+
+
 - **Exact numeric:** bit, tinyint, smallint, int, bigint, decimal, numeric, money and smallmoney
 - **Approximate numeric:** Read and float
 - **Date and time:** date, DateTime, datetime2, datetimeoffset, smalldatetime, time
