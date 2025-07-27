@@ -9,7 +9,9 @@ Imagine you have a big toy box. Inside, you keep many small boxes. Each small bo
 
 - Data can be in any form like it can be in image format, it can be in video format or can be files and txt it can be anything and can be stored in database
 
-- **Database**: This is like your toy box. It’s a place where you keep all your toys (data) so you can find them easily when you want to play. The box keeps everything neat and tidy.
+ ## Database: 
+ 
+ **DATABASE**: This is like your toy box. It’s a place where you keep all your toys (data) so you can find them easily when you want to play. The box keeps everything neat and tidy.
 
 **Database can be considered as container** where data or information can be stored which is electronically stored in database. 
 
