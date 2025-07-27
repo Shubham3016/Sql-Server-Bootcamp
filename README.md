@@ -1,12 +1,12 @@
 # SQL Server Bootcamp
 
 ## DATA
-Imagine you have a big toy box. Inside, you keep many small boxes. Each small box has different types of toys—cars, animals, blocks, etc. Let’s use this as an example to explain “data” and “database” in SQL in a way a 5-year-old can understand:
+Imagine you have a big toy box. Inside, you keep many small boxes. Each small box has different types of toys—cars, animals, blocks, etc. Let’s use this as an example to explain “data” and “database” in SQL.
 
 - **Data**: These are like your toys! Each toy is a tiny piece of information. For example, you have a red car, a blue car, and a yellow dinosaur. Each toy has colors, shapes, and types—these details are “data.”
 
 - **Database**: This is like your toy box. It’s a place where you keep all your toys (data) so you can find them easily when you want to play. The box keeps everything neat and tidy.
-- 
+
 **Database can be considered as container** where data or information can be stored which is electronically stored in database. 
 
 Database are systems that allows users to store and organize the data. They are useful when dealing with large amounts of data.
