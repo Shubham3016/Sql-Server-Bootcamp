@@ -52,6 +52,7 @@ It comforts the users to access the stored data from different locations through
 
 ![image](https://github.com/Shubham3016/Sql-Server-Bootcamp/assets/43364183/e16dc7b3-e0ce-4ee5-9199-6a97e739b3ed)
 
+https://informativedataanalyst.blogspot.com/2025/07/data-database.html
 
 ### 2) Distributed Database
 
