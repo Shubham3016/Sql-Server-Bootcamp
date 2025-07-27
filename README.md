@@ -5,6 +5,10 @@ Imagine you have a big toy box. Inside, you keep many small boxes. Each small bo
 
 - **Data**: These are like your toys! Each toy is a tiny piece of information. For example, you have a red car, a blue car, and a yellow dinosaur. Each toy has colors, shapes, and types—these details are “data.”
 
+- Data can be anything and everything Any information or facts can be considered as data like your name, age, Date of birth, Address, mobile no all this stuff can be considered as data.
+
+- Data can be in any form like it can be in image format, it can be in video format or can be files and txt it can be anything and can be stored in database
+
 - **Database**: This is like your toy box. It’s a place where you keep all your toys (data) so you can find them easily when you want to play. The box keeps everything neat and tidy.
 
 **Database can be considered as container** where data or information can be stored which is electronically stored in database. 
