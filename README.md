@@ -1,5 +1,7 @@
 # SQL Server Bootcamp
 
+https://informativedataanalyst.blogspot.com/2025/07/data-database.html
+
 ## DATA
 Imagine you have a big toy box. Inside, you keep many small boxes. Each small box has different types of toys—cars, animals, blocks, etc. Let’s use this as an example to explain “data” and “database” in SQL.
 
@@ -52,8 +54,6 @@ It comforts the users to access the stored data from different locations through
 
 ![image](https://github.com/Shubham3016/Sql-Server-Bootcamp/assets/43364183/e16dc7b3-e0ce-4ee5-9199-6a97e739b3ed)
 
-https://informativedataanalyst.blogspot.com/2025/07/data-database.html
-
 ### 2) Distributed Database
 
 Unlike a centralized database system, in distributed systems, data is distributed among different database systems of an organization. These database systems are connected via communication links. Such links help the end-users to access the data easily. Examples of the Distributed database are Apache Cassandra, HBase, Ignite, etc.
@@ -87,6 +87,8 @@ Amazon Web Services(AWS)
 , Google Cloud SQL, etc.
 
 ## 📦 SCHEMAS IN SQL 
+
+https://informativedataanalyst.blogspot.com/2025/07/what-are-schemas-in-sql-organizing-data.html
 
 A schema in SQL is like a folder inside a database that helps organize your data.
 It holds related things like tables, views, and other objects — kind of like how a folder holds files on your computer.
