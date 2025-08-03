@@ -39,3 +39,18 @@ BEGIN
 END
 $$;
 
+
+---------------------------------------------------------------------------------------------------
+
+DO $$
+DECLARE
+    my_char CHAR(1) := 'A';
+    my_varchar VARCHAR(20) := 'Hello, PostgreSQL!';
+    my_text TEXT := 'This is a longer text stored in TEXT type variable';
+BEGIN
+    RAISE NOTICE 'CHAR: %', my_char;
+    RAISE NOTICE 'VARCHAR: %', my_varchar;
+    RAISE NOTICE 'TEXT: %', my_text;
+END
+$$;
+
