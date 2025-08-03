@@ -23,3 +23,21 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('INTEGER: ' || i);
 END;
 /
+
+
+
+-----------------------------------------------------------------------------
+
+
+DECLARE
+    my_number NUMBER(10,2) := 12345.67;
+    my_numeric NUMBER(7,3) := 123.456;
+    my_binary_float BINARY_FLOAT := 98.6;
+    my_binary_double BINARY_DOUBLE := 1234567.89;
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('NUMBER: ' || my_number);
+    DBMS_OUTPUT.PUT_LINE('NUMERIC: ' || my_numeric);
+    DBMS_OUTPUT.PUT_LINE('BINARY_FLOAT: ' || my_binary_float);
+    DBMS_OUTPUT.PUT_LINE('BINARY_DOUBLE: ' || my_binary_double);
+END;
+/
