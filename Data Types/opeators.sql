@@ -1,36 +1,43 @@
 --OPEATORS IN SQL 
 
 
--- SQL Arithmetic Operators
+-- SQL Arithmetic Operators IN SQL SERVER 
 
 --SQL Addition Operator (+)
 
-Declare @A int=5
-Declare @B int=56
+DECLARE @A INT = 5;
+DECLARE @B INT = 56;
 
-Select @a+@b as Addition
+SELECT @A + @B AS Addition,
+       @A - @B AS Subtraction,
+       @A * @B AS Multiplication,
+       @B / @A AS Division,
+       @B % @A AS Modulus;
 
---SQL Subtraction Operator (-)
-Declare @Ab int=56
-Declare @Bc int=5
+-- ORACLE ARITHMETIC OPERATOR
 
-Select @ab-@bc as Subtraction
+SELECT 5 + 56 AS Addition,
+       5 - 56 AS Subtraction,
+       5 * 56 AS Multiplication,
+       56 / 5 AS Division,
+       MOD(56, 5) AS Modulus
+FROM DUAL;
 
+-- MY SQL ARITHMETIC OPERATOR
 
---SQL Multiplication Operator (+)
+SELECT 5 + 56 AS Addition,
+       5 - 56 AS Subtraction,
+       5 * 56 AS Multiplication,
+       56 / 5 AS Division,
+       56 % 5 AS Modulus;
 
-Declare @Ac int=5
-Declare @Bd int=12
+-- PG ADMIN ARITHMETIC OPERATOR
 
-Select @ac*@bd as Multiplication
-
- 
---SQL Division Operator (-)
-Declare @c int=12
-Declare @d int=2
-
-Select @c/@d as Division
-
+SELECT 5 + 56 AS Addition,
+       5 - 56 AS Subtraction,
+       5 * 56 AS Multiplication,
+       56 / 5 AS Division,
+       56 % 5 AS Modulus;
 
 --SQL Comparison Operators
 
@@ -94,5 +101,6 @@ SELECT * FROM Student_info where id in(1,2,4)
 SELECT * FROM Student_info where age not in(28,29)
 
 SELECT * FROM Student_info where gender in('male')
+
 
 
