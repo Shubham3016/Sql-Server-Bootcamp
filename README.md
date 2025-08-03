@@ -371,6 +371,130 @@ TRUNCATE command is used to removes all rows from the table or specified partiti
 TRUNCATE TABLE TABLE_NAME 
 ```
 
+## RDBMS Operators —
+
+A detailed reference of all major types of operators used in Relational Database Management Systems (RDBMS) such as MySQL, Oracle, SQL Server, PostgreSQL, and SQLite. This guide covers explanations, practical SQL examples, and theoretical relational algebra operators.
+
+## Table of Contents
+
+- [Arithmetic Operators](#arithmetic-operators)  
+- [Comparison (Relational) Operators](#comparison-relational-operators)  
+- [Logical Operators](#logical-operators)  
+- [Bitwise Operators](#bitwise-operators)  
+- [Compound Operators (Assignment)](#compound-operators-assignment)  
+- [Special Operators](#special-operators)  
+- [Set Operators](#set-operators)  
+- [String Operators](#string-operators)  
+- [Relational Algebra Operators](#relational-algebra-operators)  
+- [Sample SQL Queries](#sample-sql-queries)  
+- [Notes](#notes)  
+
+## 1. Arithmetic Operators
+
+Perform mathematical calculations on numeric data.
+
+| Operator | Description        | Example                                      |
+|----------|--------------------|----------------------------------------------|
+| `+`      | Addition           | `SELECT price + tax AS total FROM sales;`    |
+| `-`      | Subtraction        | `SELECT balance - fee AS net FROM account;`  |
+| `*`      | Multiplication     | `SELECT quantity * price AS total FROM order;` |
+| `/`      | Division           | `SELECT salary / 12 AS monthly FROM employee;` |
+| `%`      | Modulo (remainder) | `SELECT 10 % 3 AS result;`                   |
+
+## 2. Comparison (Relational) Operators
+
+Compare values and filter data.
+
+| Operator   | Description            | Example                      |
+|------------|-----------------------|------------------------------|
+| `=`        | Equal to              | `WHERE status = 'Active'`     |
+| `<>` or `!=` | Not equal to         | `WHERE city <> 'Delhi'`       |
+| `<`        | Less than             | `WHERE age < 30`              |
+| `>`        | Greater than          | `WHERE salary > 50000`        |
+| `<=`       | Less than or equal to | `WHERE age <= 18`             |
+| `>=`       | Greater than or equal to | `WHERE fee >= 100`          |
+
+## 3. Logical Operators
+
+Combine or invert multiple conditions.
+
+| Operator | Description        | Example                                |
+|----------|--------------------|----------------------------------------|
+| `AND`    | All conditions true | `WHERE dept = 'HR' AND age > 30`       |
+| `OR`     | Any condition true  | `WHERE dept = 'Sales' OR dept = 'IT'`  |
+| `NOT`    | Reverse condition   | `WHERE NOT city = 'Mumbai'`            |
+
+## 4. Bitwise Operators
+
+Operate at the binary level (mostly relevant in SQL Server, less so in MySQL/Postgres).
+
+| Operator | Description | Example                          |
+|----------|-------------|----------------------------------|
+| `&`      | Bitwise AND | `WHERE permissions & 1 = 1`       |
+| `\|`     | Bitwise OR  | `WHERE flags \| 2 = 2`            |
+| `^`      | Bitwise XOR | `SELECT 5 ^ 3 AS result;`         |
+| `~`      | Bitwise NOT | `SELECT ~8 AS result;`            |
+| `<<`     | Left Shift  | `SELECT 1 << 2 AS shifted_value;` |
+| `>>`     | Right Shift | `SELECT 8 >> 2 AS shifted_value;` |
+
+## 5. Compound Operators (Assignment)
+
+Perform operation and assign result (common in SQL Server and Oracle).
+
+| Operator | Description         | Example               |
+|----------|---------------------|-----------------------|
+| `+=`     | Add and assign      | `SET @balance += 100` |
+| `-=`     | Subtract and assign | `SET @count -= 1`     |
+| `*=`     | Multiply and assign | `SET @total *= 2`     |
+| `/=`     | Divide and assign   | `SET @avg /= 5`       |
+
+## 6. Special Operators
+
+Used for custom conditions and data checks.
+
+| Operator  | Description                        | Example                                     |
+|-----------|----------------------------------|---------------------------------------------|
+| `BETWEEN` | Range check (inclusive)           | `WHERE salary BETWEEN 30000 AND 50000`      |
+| `IN`      | Matches any value in a set        | `WHERE state IN ('UP', 'MP', 'RJ')`         |
+| `LIKE`    | Pattern matching (wildcards)      | `WHERE name LIKE 'A%'`                      |
+| `IS NULL` | Check for NULL values             | `WHERE description IS NULL`                 |
+| `EXISTS`  | Check for existence of subquery rows | `WHERE EXISTS (SELECT 1 FROM sales WHERE amount > 500)` |
+| `ANY`, `ALL` | Compare to subquery set         | `WHERE price > ALL (SELECT price FROM products)` |
+| `SOME`    | Similar to `ANY`                  | `WHERE score > SOME (SELECT score FROM leaderboard)` |
+| `UNIQUE`  | Checks uniqueness (rare in SQL)   | `SELECT UNIQUE column FROM table;`          |
+
+## 7. Set Operators
+
+Combine results from multiple SELECT statements.
+
+| Operator    | Description              | Example                                |
+|-------------|--------------------------|----------------------------------------|
+| `UNION`     | Combine, remove duplicates | `SELECT city FROM t1 UNION SELECT city FROM t2;` |
+| `UNION ALL` | Combine, keep duplicates | `SELECT name FROM a UNION ALL SELECT name FROM b;` |
+| `INTERSECT` | Returns common rows       | `SELECT id FROM a INTERSECT SELECT id FROM b;` |
+| `MINUS` / `EXCEPT` | Rows in first, not in second | `SELECT id FROM a MINUS SELECT id FROM b;` |
+
+## 8. String Operators
+
+Concatenate or manipulate strings (syntax varies by RDBMS).
+
+| Operator/Function    | Description          | Example                                          |
+|---------------------|----------------------|-------------------------------------------------|
+| `||` or `CONCAT`    | Concatenate strings   | `SELECT first_name || ' ' || last_name AS full FROM employee;` |
+| `+` (SQL Server only)| Concatenate strings  | `SELECT first_name + ' ' + last_name FROM employee;` |
+
+## 9. Relational Algebra Operators (Theoretical)
+
+Foundations for relational databases; often not used directly in SQL.
+
+- **Selection (σ)**: Rows fulfilling condition, e.g., σ(age > 30)(Employee)
+- **Projection (π)**: Columns selected, e.g., π(name, age)(Employee)
+- **Union (∪)**: Combines all distinct rows from sets.
+- **Set Difference (-)**: Rows in one set but not the other.
+- **Cartesian Product (×)**: All combinations of rows.
+- **Rename (ρ)**: Rename relations or columns.
+
+
 
 ## CONSTRAINTS
 
