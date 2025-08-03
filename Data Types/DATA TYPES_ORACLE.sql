@@ -41,3 +41,17 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('BINARY_DOUBLE: ' || my_binary_double);
 END;
 /
+
+------------------------------------------------------------------------------------------
+
+
+DECLARE
+    my_char CHAR(1) := 'A';
+    my_varchar2 VARCHAR2(20) := 'Hello, Oracle!';
+    my_clob CLOB := 'This is a longer text stored in CLOB type variable';
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('CHAR: ' || my_char);
+    DBMS_OUTPUT.PUT_LINE('VARCHAR2: ' || my_varchar2);
+    DBMS_OUTPUT.PUT_LINE('CLOB: ' || my_clob);
+END;
+/
