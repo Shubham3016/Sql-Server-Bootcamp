@@ -21,3 +21,21 @@ DECLARE
 BEGIN
     RAISE NOTICE 'BIGINT: %', my_bigint;
 END $$;
+
+
+---------------------------------------------------------------------------------------------------
+
+DO $$
+DECLARE
+    my_decimal NUMERIC(10,2) := 12345.67;
+    my_numeric DECIMAL(7,3) := 123.456;
+    my_real REAL := 98.6;
+    my_double DOUBLE PRECISION := 1234567.89;
+BEGIN
+    RAISE NOTICE 'DECIMAL: %', my_decimal;
+    RAISE NOTICE 'NUMERIC: %', my_numeric;
+    RAISE NOTICE 'REAL: %', my_real;
+    RAISE NOTICE 'DOUBLE: %', my_double;
+END
+$$;
+
