@@ -76,12 +76,12 @@ select @DEC
 -- IN decimal yo
 
 --When you try to set @dec=3.14159, it results in an error because 3.14159 has a digit
---to the left of the decimal point, which your declaration doesn’t allow
+--to the left of the decimal point, which your declaration doesnâ€™t allow
 --this leaves no room for digits to the left of the decimal point.
 
 --To fix this, you could declare @dec as DECIMAL(9,5), for example. 
 --This would allow for up to 9 digits in total, with 5 of them 
---to the right of the decimal point12. Here’s how you could declare it:
+--to the right of the decimal point12. Hereâ€™s how you could declare it:
 
 
 
