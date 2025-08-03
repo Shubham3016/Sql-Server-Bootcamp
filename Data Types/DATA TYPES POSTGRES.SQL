@@ -54,3 +54,22 @@ BEGIN
 END
 $$;
 
+
+----------------------------------------------------------------------------------------------------
+
+DO $$
+DECLARE
+    my_date DATE := current_date;
+    my_time TIME := NOW();
+    my_timestamp TIMESTAMP := now();
+    my_timestamptz TIMESTAMPTZ := now();
+    my_interval INTERVAL := '2 hours 39 minutes';
+BEGIN
+    RAISE NOTICE 'DATE: %', my_date;
+    RAISE NOTICE 'TIME: %', my_time;
+    RAISE NOTICE 'TIMESTAMP: %', my_timestamp;
+    RAISE NOTICE 'TIMESTAMPTZ: %', my_timestamptz;
+    RAISE NOTICE 'INTERVAL: %', my_interval;
+END $$;
+
+
