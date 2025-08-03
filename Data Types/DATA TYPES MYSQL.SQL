@@ -46,6 +46,33 @@ SELECT @text_val;
 
 
 
+--------------------------------------------------------------------------------------------------------
 
+
+
+-- MySQL user variables are untyped; just assign/cast values.
+
+-- DATE example
+SET @my_date = CAST('2025-08-03' AS DATE);
+SELECT @my_date;
+
+-- DATETIME example
+SET @my_datetime = CAST('2025-08-03 20:00:00' AS DATETIME);
+SELECT @my_datetime;
+
+
+SET @my_time = TIME(NOW());
+SELECT @my_time;
+
+SET @my_time = CURTIME();
+SELECT @my_time;
+
+
+SET @current_timestamp = CURRENT_TIMESTAMP;
+SELECT @current_timestamp;
+
+-- Using NOW() (same as CURRENT_TIMESTAMP)
+SET @now_timestamp = NOW();
+SELECT @now_timestamp;
 
 
