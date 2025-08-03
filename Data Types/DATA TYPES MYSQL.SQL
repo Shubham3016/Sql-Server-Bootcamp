@@ -11,7 +11,7 @@ SET @bigint := 9223372036854775807;
 SELECT @bigint;
 
 
-----
+--------------------------------------------------------------------------------------------------------
 
 -- MySQL uses user-defined variables (no DECLARE)
 SET @decimal DECIMAL(10,2);
@@ -29,3 +29,23 @@ SELECT @float;
 SET @double DOUBLE;
 SET @double = 1234567.89;
 SELECT @double;
+
+--------------------------------------------------------------------------------------------------------
+
+-- User variables: no explicit type declaration, dynamic typing
+
+SET @char_val = CAST('A' AS CHAR(1));
+SELECT @char_val;
+
+SET @varchar_val = CAST('Hello, MySQL!' AS VARCHAR(20));
+SELECT @varchar_val;
+
+SET @text_val = 'This is a longer text stored in TEXT type variable';
+SELECT @text_val;
+
+
+
+
+
+
+
