@@ -460,21 +460,16 @@ Constraints can be column level or table level. Column level constraints apply t
 
 The following constraints are commonly used in SQL:
 
-- **NOT NULL** - Ensures that a column cannot have a NULL value
+| Constraint   | What it does                                                      |
+|--------------|------------------------------------------------------------------|
+| NOT NULL     | Makes sure a column cannot have missing (NULL) values            |
+| UNIQUE       | Makes sure all values in a column are different from each other  |
+| PRIMARY KEY  | Uniquely identifies each row—no duplicates and no NULL values    |
+| FOREIGN KEY  | Connects a column in one table to a column in another table      |
+| CHECK        | Makes sure values meet a certain rule (e.g., numbers must be positive) |
+| DEFAULT      | Automatically gives a column a value if none is provided        |
+| INDEX        | Makes searching and getting data faster (not a data rule, for performance) |
 
-- **UNIQUE** - Ensures that all values in a column are different
-
-- **PRIMARY KEY** - A combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table
-
-- **FOREIGN KEY** - Prevents actions that would destroy links between tables
-
-- **CHECK** - Ensures that the values in a column satisfies a specific condition
-
-- **DEFAULT** - Sets a default value for a column if no value is specified
-
-- **CREATE INDEX** - Used to create and retrieve data from the database very quickly
-
-Let’s look some of the most widely used constraints in RDBMS:
 
 ### NOT NULL CONSTRAINT
 
