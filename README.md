@@ -448,52 +448,6 @@ Perform operation and assign result (common in SQL Server and Oracle).
 | `*=`     | Multiply and assign | `SET @total *= 2`     |
 | `/=`     | Divide and assign   | `SET @avg /= 5`       |
 
-## 6. Special Operators
-
-Used for custom conditions and data checks.
-
-| Operator  | Description                        | Example                                     |
-|-----------|----------------------------------|---------------------------------------------|
-| `BETWEEN` | Range check (inclusive)           | `WHERE salary BETWEEN 30000 AND 50000`      |
-| `IN`      | Matches any value in a set        | `WHERE state IN ('UP', 'MP', 'RJ')`         |
-| `LIKE`    | Pattern matching (wildcards)      | `WHERE name LIKE 'A%'`                      |
-| `IS NULL` | Check for NULL values             | `WHERE description IS NULL`                 |
-| `EXISTS`  | Check for existence of subquery rows | `WHERE EXISTS (SELECT 1 FROM sales WHERE amount > 500)` |
-| `ANY`, `ALL` | Compare to subquery set         | `WHERE price > ALL (SELECT price FROM products)` |
-| `SOME`    | Similar to `ANY`                  | `WHERE score > SOME (SELECT score FROM leaderboard)` |
-| `UNIQUE`  | Checks uniqueness (rare in SQL)   | `SELECT UNIQUE column FROM table;`          |
-
-## 7. Set Operators
-
-Combine results from multiple SELECT statements.
-
-| Operator    | Description              | Example                                |
-|-------------|--------------------------|----------------------------------------|
-| `UNION`     | Combine, remove duplicates | `SELECT city FROM t1 UNION SELECT city FROM t2;` |
-| `UNION ALL` | Combine, keep duplicates | `SELECT name FROM a UNION ALL SELECT name FROM b;` |
-| `INTERSECT` | Returns common rows       | `SELECT id FROM a INTERSECT SELECT id FROM b;` |
-| `MINUS` / `EXCEPT` | Rows in first, not in second | `SELECT id FROM a MINUS SELECT id FROM b;` |
-
-## 8. String Operators
-
-Concatenate or manipulate strings (syntax varies by RDBMS).
-
-| Operator/Function    | Description          | Example                                          |
-|---------------------|----------------------|-------------------------------------------------|
-| `||` or `CONCAT`    | Concatenate strings   | `SELECT first_name || ' ' || last_name AS full FROM employee;` |
-| `+` (SQL Server only)| Concatenate strings  | `SELECT first_name + ' ' + last_name FROM employee;` |
-
-## 9. Relational Algebra Operators (Theoretical)
-
-Foundations for relational databases; often not used directly in SQL.
-
-- **Selection (σ)**: Rows fulfilling condition, e.g., σ(age > 30)(Employee)
-- **Projection (π)**: Columns selected, e.g., π(name, age)(Employee)
-- **Union (∪)**: Combines all distinct rows from sets.
-- **Set Difference (-)**: Rows in one set but not the other.
-- **Cartesian Product (×)**: All combinations of rows.
-- **Rename (ρ)**: Rename relations or columns.
-
 
 
 ## CONSTRAINTS
