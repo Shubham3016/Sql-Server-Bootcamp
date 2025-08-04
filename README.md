@@ -452,7 +452,8 @@ Perform operation and assign result (common in SQL Server and Oracle).
 
 ## CONSTRAINTS
 
-Constraints refers to limitation or restriction applied to a column in a table. Constraints are very important to maintain data integrity among tables. 
+SQL constraints are rules that help keep your database clean, correct, and safe.
+They make sure your data follows certain rules and prevent mistakes like missing values or duplicates.
 
 If you want to make sure that wrong data is not inserted into your table then these kind of sanity checks can be applied by using CONSTRAINTS. 
 
